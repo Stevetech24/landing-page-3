@@ -6,6 +6,10 @@ const productBtn = document.getElementById("product-btn");
 const solutionBtn = document.getElementById("solution-btn");
 const resourcesBtn = document.getElementById("resources-btn");
 const priceBtn = document.getElementById("price-btn");
+const menuBarResponsive = document.getElementById("responsive-menu-bar");
+const menuBar = document.getElementById("menu-bar");
+const closeMenu = document.getElementById("close-menu");
+const container = document.getElementsByClassName(".container");
 
 productBtn.addEventListener(
   "mouseenter",
@@ -42,3 +46,22 @@ resourcesBtn.addEventListener(
   "mouseleave",
   () => (dropMenu4.style.display = "none")
 );
+menuBar.addEventListener("click", () => {
+  menuBarResponsive.style.transform = " translateX(0)";
+  menuBar.style.display = "none";
+  closeMenu.style.display = "block";
+  // container.style.position = "static";
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 480) {
+    menuBar.style.display = "none";
+    closeMenu.style.display = "none";
+  }
+});
+
+closeMenu.addEventListener("click", () => {
+  menuBarResponsive.style.transform = " translateX(-500px)";
+  closeMenu.style.display = "none";
+  menuBar.style.display = "block";
+});
