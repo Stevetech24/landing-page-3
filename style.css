@@ -24,7 +24,14 @@ button:hover {
 p {
   color: #0f172a;
 }
-
+#responsive-menu-bar {
+  position: absolute;
+  display: none;
+}
+#close-menu {
+  display: none;
+  font-size: 3.2rem;
+}
 .container {
   width: 100%;
   max-width: 1440px;
@@ -88,7 +95,7 @@ p {
   border-radius: 8px;
   font-size: 1.6rem;
 }
-.menu-bar {
+#menu-bar {
   display: none;
 }
 /*  DROP DOWN MENU*/
@@ -974,3 +981,4 @@ hr {
     gap: 10px;
   }
 }
+
