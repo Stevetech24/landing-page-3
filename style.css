@@ -797,7 +797,7 @@ hr {
   .nav-right {
     display: none;
   }
-  .menu-bar {
+  #menu-bar {
     display: block;
     font-size: 3.2rem;
   }
